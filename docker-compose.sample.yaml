@@ -88,6 +88,8 @@ services:
     ports:
       - "${RABBITMQ_HOST_PORT_C}:5672"
       - "${RABBITMQ_HOST_PORT_S}:15672"
+    volumes:
+      - ${DATA_DIR}/rabbitmq:/var/lib/rabbitmq/:rw
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
