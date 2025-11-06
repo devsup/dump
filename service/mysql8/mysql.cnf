@@ -25,5 +25,11 @@ log-error               = /var/log/mysql/mysql.error.log
 
 default-time-zone       = '+8:00'
 
+# 解决--skip-host-cache弃用警告
+host_cache_size=0
+
+# 时区设置
+default-time-zone='+08:00'
+
 [mysql]
 default-character-set   = utf8mb4
